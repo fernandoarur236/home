@@ -1,0 +1,16 @@
+/*
+ * HOME_LIGHT_cfg.h
+ *
+ *  Created on: 12 Jan 2023
+ *      Author: 20109
+ */
+
+#ifndef HAL_HOME_LIGHT_HOME_LIGHT_CFG_H_
+#define HAL_HOME_LIGHT_HOME_LIGHT_CFG_H_
+
+#define HOME_LEDS_PORT	PORTC_ID
+#define HOME_LED1_PIN	PIN1_ID
+#define HOME_LED2_PIN	PIN2_ID
+#define HOME_LED3_PIN	PIN3_ID
+
+#endif /* HAL_HOME_LIGHT_HOME_LIGHT_CFG_H_ */

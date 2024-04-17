@@ -1,0 +1,12 @@
+.vs/AVR-COTS-Application/v14/.atsuo
+.vscode
+Release/
+.vs
+.dist
+*.pdsbak
+Project Backups/
+obj
+*.workspace
+Release/
+node_modules
+Debug/

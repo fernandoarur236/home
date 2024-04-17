@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Smart Home</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <div class="logo">
+          <div class="logo-container">
+            <img src="./img/home.svg" alt="" />
+          </div>
+          <h1 class="logo-text">Smart Home</h1>
+        </div>
+        <div class="nav-end">
+          <div class="person-tab">
+            <div class="icon-container">
+              <img src="./img/account.svg" alt="" />
+            </div>
+            <h1 class="user-name">User</h1>
+          </div>
+          <div class="connect-tab">
+            <div class="icon-container">
+              <a href="#connect-overlay">
+                <img src="./img/connect.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="connect-tab">
+            <div class="icon-container">
+              <a href="#password-overlay">
+                <img src="./img/password.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- status section -->
+    <section class="status">
+      <div class="status-item">
+        <div class="icon-container">
+          <img src="./img/cloud.svg" alt="" />
+        </div>
+        <div class="item-value" id="status-outdoor-temp">15°</div>
+        <div class="item-title">Outdoor Weather</div>
+      </div>
+      <div class="status-item">
+        <div class="icon-container">
+          <img src="./img/hum.svg" alt="" />
+        </div>
+        <div class="item-value" id="status-outdoor-hum">15%</div>
+        <div class="item-title">Outdoor Humidity</div>
+      </div>
+      <div class="status-item">
+        <div class="icon-container">
+          <img src="./img/temp.svg" alt="" />
+        </div>
+        <div class="item-value" id="status-intdoor-temp">15°</div>
+        <div class="item-title">Intdoor Temperature</div>
+      </div>
+
+      <div class="status-item">
+        <div class="icon-container">
+          <img src="./img/door.svg" id="door-icon-status" alt="" />
+        </div>
+        <div class="item-value" id="status-door">Closed</div>
+        <div class="item-title">Door Status</div>
+      </div>
+      <div class="status-item">
+        <div class="icon-container">
+          <img src="./img/lamp.svg" alt="" />
+        </div>
+        <div class="item-value bar-light">
+          <div class="light-icon">
+            <img src="./img/dim-ligh.svg" alt="" />
+          </div>
+          <div class="bar-container">
+            <div class="progress-light-status"></div>
+          </div>
+          <div class="light-icon">
+            <img src="./img/solid-light.svg" alt="" />
+          </div>
+        </div>
+        <div class="item-title">light Intensity</div>
+      </div>
+    </section>
+
+    <!-- control-section -->
+    <section class="control">
+      <div class="control-box">
+        <div class="control-item-box">
+          <div class="icon-container-control">
+            <img src="./img/fan.svg" alt="" />
+          </div>
+          <div class="turn-container">
+            <div class="btn-container" id="fan-on-btn-back">
+              <div class="btn-text" id="fan-on-text-btn">ON</div>
+              <div class="btn-circle" id="fan-on-btn"></div>
+            </div>
+          </div>
+          <div class="control-item fan-control-option">
+            <div class="control-item-title">Speed</div>
+            <div class="control-item-bar">
+              <div id="minus-fan-speed" class="control-bar-btn">-</div>
+              <div class="control-item-bar-container">
+                <div id="fan-speed-bar-progress"></div>
+              </div>
+              <div id="plus-fan-speed" class="control-bar-btn">+</div>
+            </div>
+            <div class="control-item-value" id="control-fan-speed-value">
+              60%
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="control-item fan-control-option">
+            <div class="control-item-title">Auto Adjustment</div>
+            <div class="btn-container" id="auto-fan-btn-back">
+              <div class="btn-text" id="auto-fan-text-btn">ON</div>
+              <div class="btn-circle" id="auto-fan-btn"></div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="control-item fan-control-option temp-control-option">
+            <div class="control-item-title">Min Temp</div>
+            <div class="control-item-bar">
+              <div id="minus-temp" class="control-bar-btn">-</div>
+              <div class="control-item-bar-container">
+                <div id="temp-bar-progress"></div>
+              </div>
+              <div id="plus-temp" class="control-bar-btn">+</div>
+            </div>
+            <div class="control-item-value" id="control-temp-value">20C</div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="control-box">
+        <div class="control-item-box">
+          <div class="icon-container-control">
+            <img src="./img/lamp-big.svg" alt="" />
+          </div>
+          <div class="turn-container">
+            <div class="btn-container" id="light-btn-back">
+              <div class="btn-text" id="light-btn-text">ON</div>
+              <div class="btn-circle" id="light-on-btn"></div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="control-item light-control-option">
+            <div class="control-item-title">Intensity</div>
+            <div class="control-item-bar">
+              <div id="minus-light" class="control-bar-btn">-</div>
+              <div class="control-item-bar-container">
+                <div id="intensity-bar-progress"></div>
+              </div>
+              <div id="plus-light" class="control-bar-btn">+</div>
+            </div>
+            <div class="control-item-value" id="light-inten-value">60%</div>
+          </div>
+          <!--  -->
+          <div class="control-item light-control-option">
+            <div class="control-item-title">Auto Adjustment</div>
+            <div class="btn-container" id="auto-light-btn-back">
+              <div class="btn-text" id="auto-light-text-btn">ON</div>
+              <div class="btn-circle" id="auto-light-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="control-box">
+        <div class="side-control-wrapper">
+          <div class="side-control-item-box">
+            <div class="side-control-icon">
+              <img src="./img/door.svg" alt="" />
+            </div>
+            <div class="side-control-text">Door Control</div>
+            <div class="btn-container" id="door-control-back">
+              <div class="btn-text" id="door-control-text-btn">ON</div>
+              <div class="btn-circle" id="door-control-btn"></div>
+            </div>
+          </div>
+          <div class="side-control-item-box">
+            <div class="side-control-icon">
+              <img src="./img/device.svg" alt="" />
+            </div>
+            <div class="side-control-text">Device Control</div>
+            <div class="btn-container" id="device-control-back">
+              <div class="btn-text" id="device-control-text-btn">ON</div>
+              <div class="btn-circle" id="device-control-btn"></div>
+            </div>
+          </div>
+          <div class="side-control-item-box voice-item-box">
+            <div class="mic-btn" id="mic-btn-id">
+              <img src="./img/mic.svg" alt="" />
+            </div>
+            <div class="voice-output">Say Something..</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div></div>
+
+    <div id="connect-overlay">
+      <a class="close" href="/Public/index.html"
+        ><img src="./img/close.svg" alt=""
+      /></a>
+      <div class="container">
+        <div class="title">Select Port</div>
+        <div class="form-select-container">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="port-list"
+          >
+            <option selected>Select Port</option>
+            <option value="COM1">COM1</option>
+            <option value="COM2">COM2</option>
+            <option value="COM3">COM3</option>
+            <option value="COM4">COM4</option>
+            <option value="COM5">COM5</option>
+            <option value="COM6">COM6</option>
+            <option value="COM7">COM7</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button id="connectBtn">
+            <img src="./img/connect.svg" alt="" />
+            Connect
+          </button>
+          <button id="disconnectBtn">
+            <img src="./img/disconnected.svg" alt="" />
+            Disconnect
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="password-overlay">
+      <a class="close" href="/Public/index.html"
+        ><img src="./img/close.svg" alt=""
+      /></a>
+      <div class="container">
+        <div class="title">Change your password</div>
+        <div class="form-select-container-pass">
+          <input
+            type="password"
+            placeholder="Enter New Password"
+            id="paswordInput"
+            maxlength="8"
+          />
+          <img src="./img/password-key.svg" alt="" />
+        </div>
+        <div class="actions">
+          <button id="passwordBtn">
+            <img src="./img/connect.svg" alt="" />
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="uartUtility.js"></script>
+    <script src="connectAndDis.js"></script>
+    <script src="controlFanScript.js"></script>
+    <script src="controlLightScript.js"></script>
+    <script src="sideControlScript.js"></script>
+    <script src="statusScript.js"></script>
+  </body>
+</html>
